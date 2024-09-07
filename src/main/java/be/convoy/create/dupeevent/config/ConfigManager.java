@@ -36,9 +36,9 @@ public class ConfigManager {
             boolean newDir = configDir.mkdirs();
 
             if (newDir) {
-                ClickableEntities.LOGGER.info(ClickableEntities.MOD_NAME + ": " + "Successfully Created Config Directory");
+                CreateConvoyDupeEvent.LOGGER.info(CreateConvoyDupeEvent.MOD_NAME + ": " + "Successfully Created Config Directory");
             } else {
-                ClickableEntities.LOGGER.error(ClickableEntities.MOD_NAME + ": " + "Failed to Create Config Directory");
+                CreateConvoyDupeEvent.LOGGER.error(CreateConvoyDupeEvent.MOD_NAME + ": " + "Failed to Create Config Directory");
                 return;
             }
         }
@@ -46,14 +46,14 @@ public class ConfigManager {
         configFile = new File(configFileLocation + configFileName);
         try {
             if (configFile.createNewFile()) {
-                ClickableEntities.LOGGER.info(ClickableEntities.MOD_NAME + ": " + "File created: " + configFile.getPath());
+                CreateConvoyDupeEvent.LOGGER.info(CreateConvoyDupeEvent.MOD_NAME + ": " + "File created: " + configFile.getPath());
                 
                 copyFile(this.getClass().getClassLoader().getResourceAsStream(defaultConfigFilePath), configFile);
             } else {
-                ClickableEntities.LOGGER.info(ClickableEntities.MOD_NAME + ": " + "Config file already exists.");
+                CreateConvoyDupeEvent.LOGGER.info(CreateConvoyDupeEvent.MOD_NAME + ": " + "Config file already exists.");
             }
         } catch (IOException e) {
-            ClickableEntities.LOGGER.info(ClickableEntities.MOD_NAME + ": " + "An error occurred.");
+            CreateConvoyDupeEvent.LOGGER.info(CreateConvoyDupeEvent.MOD_NAME + ": " + "An error occurred.");
             e.printStackTrace();
         }
     }
@@ -100,6 +100,6 @@ public class ConfigManager {
                 outputStream.close(); 
             } 
         }
-        ClickableEntities.LOGGER.info("Successfully Copied File");
+        CreateConvoyDupeEvent.LOGGER.info("Successfully Copied File");
     } 
 }
