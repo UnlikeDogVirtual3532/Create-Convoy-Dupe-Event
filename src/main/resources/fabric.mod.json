@@ -1,0 +1,40 @@
+{
+	"schemaVersion": 1,
+	"id": "create-convoy-dupe-event",
+	"version": "${version}",
+	"name": "Create Convoy Dupe Event",
+	"description": "This is an example description! Tell everyone what your mod is about!",
+	"authors": [
+		"virtualengi"
+	],
+	"contact": {
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "MIT",
+	"icon": "assets/create-convoy-dupe-event/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"be.convoy.create.dupeevent.CreateConvoyDupeEvent"
+		],
+		"client": [
+			"be.convoy.create.dupeevent.CreateConvoyDupeEventClient"
+		]
+	},
+	"mixins": [
+		"create-convoy-dupe-event.mixins.json",
+		{
+			"config": "create-convoy-dupe-event.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.16.5",
+		"minecraft": "~1.20.4",
+		"java": ">=17",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
