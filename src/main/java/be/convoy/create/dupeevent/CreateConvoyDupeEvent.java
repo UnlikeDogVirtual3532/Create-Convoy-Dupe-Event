@@ -4,12 +4,7 @@ import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.command.v2.CommandRegistrationCallback;
 import net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents;
 import net.minecraft.server.MinecraftServer;
-import net.minecraft.server.PlayerManager;
-import net.minecraft.server.network.ServerPlayerEntity;
-
-import java.util.List;
 import java.util.Map;
-import java.util.Random;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

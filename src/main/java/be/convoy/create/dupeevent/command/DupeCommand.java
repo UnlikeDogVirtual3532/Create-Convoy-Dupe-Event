@@ -18,7 +18,7 @@ public class DupeCommand implements Command<ServerCommandSource> {
         if (context.getSource().isExecutedByPlayer()) {
             ServerPlayerEntity player = context.getSource().getPlayerOrThrow();
 
-            if (player.getUuidAsString() == CreateConvoyDupeEvent.configMap.get("currentPlayer")) {
+            if (player.getUuidAsString().equals(CreateConvoyDupeEvent.configMap.get("currentPlayer"))) {
                 ItemStack playerItems = player.getMainHandStack().copy();
 
                 player.giveItemStack(playerItems);
