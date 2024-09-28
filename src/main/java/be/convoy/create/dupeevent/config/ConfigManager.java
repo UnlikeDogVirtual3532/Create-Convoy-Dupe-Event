@@ -58,25 +58,25 @@ public class ConfigManager {
         }
     }
 
-    public Map<String, String> getConfig() {
+    public Map<String, Object> getConfig() {
         Yaml yaml = new Yaml();
 
         try {
             FileInputStream inputStream = new FileInputStream(configFile);
             return yaml.load(inputStream);
         } catch (Exception e) {
-            Map<String, String> returnMap = Map.of();
+            Map<String, Object> returnMap = Map.of();
             return returnMap;
         }
     }
 
-    public Map<String, String> getDefaultConfig() {
+    public Map<String, Object> getDefaultConfig() {
         Yaml yaml = new Yaml();
         InputStream inputStream = this.getClass().getClassLoader().getResourceAsStream(defaultConfigFilePath);
         return yaml.load(inputStream);
     }
 
-    public void saveConfig(Map<String, String> configMap) {
+    public void saveConfig(Map<String, Object> configMap) {
         Yaml yaml = new Yaml();
         
         try {

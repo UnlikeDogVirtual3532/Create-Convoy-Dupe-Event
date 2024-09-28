@@ -19,7 +19,7 @@ public class CreateConvoyDupeEvent implements ModInitializer {
 	public static String configFileLocation = "config/";
     public static String configFileName = "DupeEvent.yaml";
     public static String defaultConfigFilePath = "assets/create-convoy-dupe-event/default_config.yaml";
-    public static Map<String, String> configMap;
+    public static Map<String, Object> configMap;
 
 	@Override
 	public void onInitialize() {
