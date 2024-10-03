@@ -14,7 +14,7 @@ import be.convoy.create.dupeevent.CreateConvoyDupeEvent;
 public class ConfigManager {
     private String configFileLocation;
     private String configFileName;
-    private String defaultConfigFilePath = "assets/clickable-entities/default_config.yaml";
+    private String defaultConfigFilePath = "assets/create-convoy-dupe-event/default_config.yaml";
     private File configDir;
     private File configFile;
 
